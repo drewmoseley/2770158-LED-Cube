@@ -37,12 +37,30 @@
 // * the first 48 lines, omitting one grayed out section. To include an additional pattern, disable this line and enable the desired value.
 
 // #define page 16       // Repeats one pattern       
- #define page 32      // Repeats two patterns         
-// #define page 48      // Repeats three patterns        
-// #define page 64         // Repeats four patterns
+// #define page 32       // Repeats two patterns         
+// #define page 48       // Repeats three patterns        
+// #define page 64       // Repeats four patterns
+ #define page 96         // Repeats six patterns
 
 const unsigned int table[][4]={
-
+#if 0
+                               {0x1FF,0x1FF,0x1FF,0x01ff}, // All on on all 3 levels
+                               {0x1FF,0x1FF,0x1FF,0x01ff}, // All on on all 3 levels
+                               {0x1FF,0x1FF,0x1FF,0x01ff}, // All on on all 3 levels
+                               {0x1FF,0x1FF,0x1FF,0x01ff}, // All on on all 3 levels
+                               {0x1FF,0x1FF,0x1FF,0x01ff}, // All on on all 3 levels
+                               {0x1FF,0x1FF,0x1FF,0x01ff}, // All on on all 3 levels
+                               {0x1FF,0x1FF,0x1FF,0x01ff}, // All on on all 3 levels
+                               {0x1FF,0x1FF,0x1FF,0x01ff}, // All on on all 3 levels
+                               {0x1FF,0x1FF,0x1FF,0x01ff}, // All on on all 3 levels
+                               {0x1FF,0x1FF,0x1FF,0x01ff}, // All on on all 3 levels
+                               {0x1FF,0x1FF,0x1FF,0x01ff}, // All on on all 3 levels
+                               {0x1FF,0x1FF,0x1FF,0x01ff}, // All on on all 3 levels
+                               {0x1FF,0x1FF,0x1FF,0x01ff}, // All on on all 3 levels
+                               {0x1FF,0x1FF,0x1FF,0x01ff}, // All on on all 3 levels
+                               {0x1FF,0x1FF,0x1FF,0x01ff}, // All on on all 3 levels
+                               {0x1FF,0x1FF,0x1FF,0x01ff}, // All on on all 3 levels
+#else
 //         Merry-go-round
 
                                {0x038,0x038,0x038,0x01ff}, // Lights 4-5-6 on all three levels
@@ -61,7 +79,7 @@ const unsigned int table[][4]={
                                {0x111,0x111,0x111,0x01ff},
                                {0x092,0x092,0x092,0x01ff},                             
                                {0x054,0x054,0x054,0x01ff}, 
- 
+#endif 
 //         Merry-go-round 2
 
 //                               {0x000,0x000,0x038,0x02ff}, // Lights 4-5-6 on all three levels
@@ -121,60 +139,60 @@ const unsigned int table[][4]={
                               
 //         Elevator
 
-//                               {0x1ff,0x000,0x000,0x06ff}, // Lights all LEDs on base level
-//                               {0x000,0x1ff,0x000,0x06ff}, // Lights all LEDs on middle level                               
-//                               {0x000,0x000,0x1ff,0x06ff}, // Lights all LEDs on top level                              
-//                               {0x000,0x000,0x1ff,0x06ff}, 
-//                               {0x000,0x000,0x1ff,0x06ff},                                
-//                               {0x000,0x000,0x1ff,0x06ff},                               
-//                               {0x000,0x000,0x1ff,0x06ff}, 
-//                               {0x000,0x000,0x1ff,0x06ff},                                
-//                               {0x000,0x000,0x1ff,0x06ff},                               
-//                               {0x000,0x1ff,0x000,0x06ff}, 
-//                               {0x000,0x000,0x1ff,0x06ff},                                
-//                               {0x000,0x1ff,0x000,0x06ff},                               
-//                               {0x1ff,0x000,0x000,0x06ff}, 
-//                               {0x000,0x1ff,0x000,0x06ff},                                
-//                               {0x000,0x000,0x1ff,0x06ff},                               
-//                               {0x000,0x1ff,0x000,0x06ff},                                
+                               {0x1ff,0x000,0x000,0x06ff}, // Lights all LEDs on base level
+                               {0x000,0x1ff,0x000,0x06ff}, // Lights all LEDs on middle level                               
+                               {0x000,0x000,0x1ff,0x06ff}, // Lights all LEDs on top level                              
+                               {0x000,0x000,0x1ff,0x06ff}, 
+                               {0x000,0x000,0x1ff,0x06ff},                                
+                               {0x000,0x000,0x1ff,0x06ff},                               
+                               {0x000,0x000,0x1ff,0x06ff}, 
+                               {0x000,0x000,0x1ff,0x06ff},                                
+                               {0x000,0x000,0x1ff,0x06ff},                               
+                               {0x000,0x1ff,0x000,0x06ff}, 
+                               {0x000,0x000,0x1ff,0x06ff},                                
+                               {0x000,0x1ff,0x000,0x06ff},                               
+                               {0x1ff,0x000,0x000,0x06ff}, 
+                               {0x000,0x1ff,0x000,0x06ff},                                
+                               {0x000,0x000,0x1ff,0x06ff},                               
+                               {0x000,0x1ff,0x000,0x06ff},                                
 
 
 //         Spiral
-//                               {0x007,0x007,0x007,0x06ff}, // Lights 1-2-3 on all three levels
-//                               {0x111,0x111,0x111,0x02ff}, // Lights 1-5-9 on all three levels
-//                               {0x049,0x049,0x049,0x06ff}, // Lights 1-4-7 on all three levels                              
-//                               {0x054,0x054,0x054,0x02ff}, // Lights 3-5-7 on all three levels
-//                               {0x1c0,0x1c0,0x1c0,0x06ff}, // Lights 7-8-9 on all three levels
-//                               {0x111,0x111,0x111,0x02ff},
-//                               {0x124,0x124,0x124,0x06ff}, // Lights 3-6-9 on all three levels                               
-//                               {0x054,0x054,0x054,0x02ff}, 
+                               {0x007,0x007,0x007,0x06ff}, // Lights 1-2-3 on all three levels
+                               {0x111,0x111,0x111,0x02ff}, // Lights 1-5-9 on all three levels
+                               {0x049,0x049,0x049,0x06ff}, // Lights 1-4-7 on all three levels                              
+                               {0x054,0x054,0x054,0x02ff}, // Lights 3-5-7 on all three levels
+                               {0x1c0,0x1c0,0x1c0,0x06ff}, // Lights 7-8-9 on all three levels
+                               {0x111,0x111,0x111,0x02ff},
+                               {0x124,0x124,0x124,0x06ff}, // Lights 3-6-9 on all three levels                               
+                               {0x054,0x054,0x054,0x02ff}, 
  
-//                               {0x007,0x007,0x007,0x06ff}, 
-//                               {0x111,0x111,0x111,0x02ff},
-//                               {0x049,0x049,0x049,0x06ff},                               
-//                               {0x054,0x054,0x054,0x02ff},
-//                               {0x1c0,0x1c0,0x1c0,0x06ff},
-//                               {0x111,0x111,0x111,0x02ff},
-//                               {0x124,0x124,0x124,0x06ff},                                
-//                               {0x054,0x054,0x054,0x02ff},                     
+                               {0x007,0x007,0x007,0x06ff}, 
+                               {0x111,0x111,0x111,0x02ff},
+                               {0x049,0x049,0x049,0x06ff},                               
+                               {0x054,0x054,0x054,0x02ff},
+                               {0x1c0,0x1c0,0x1c0,0x06ff},
+                               {0x111,0x111,0x111,0x02ff},
+                               {0x124,0x124,0x124,0x06ff},                                
+                               {0x054,0x054,0x054,0x02ff},                     
 
 //         Sweeper
-//                               {0x007,0x007,0x007,0x06ff}, // Lights 1-2-3 on all three levels
-//                               {0x038,0x038,0x038,0x06ff}, // Lights 4-5-6 on all three levels
-//                               {0x1c0,0x1c0,0x1c0,0x06ff}, // Lights 7-8-9 on all three levels
-//                               {0x111,0x111,0x111,0x02ff}, // Lights 1-5-9 on all three levels
-//                               {0x124,0x124,0x124,0x06ff}, // Lights 3-6-9 on all three levels                               
-//                               {0x092,0x092,0x092,0x06ff}, // Lights 2-5-8 on all three levels
-//                               {0x049,0x049,0x049,0x06ff}, // Lights 1-4-7 on all three levels                              
-//                               {0x111,0x111,0x111,0x02ff}, // Lights 1-5-9 on all three levels
-//                              {0x007,0x007,0x007,0x06ff}, // Lights 1-2-3 on all three levels
-//                               {0x038,0x038,0x038,0x06ff}, // Lights 4-5-6 on all three levels
-//                               {0x1c0,0x1c0,0x1c0,0x06ff}, // Lights 7-8-9 on all three levels
-//                              {0x111,0x111,0x111,0x02ff}, // Lights 1-5-9 on all three levels
-//                               {0x124,0x124,0x124,0x06ff}, // Lights 3-6-9 on all three levels                               
-//                               {0x092,0x092,0x092,0x06ff}, // Lights 2-5-8 on all three levels
-//                               {0x049,0x049,0x049,0x06ff}, // Lights 1-4-7 on all three levels                              
-//                               {0x111,0x111,0x111,0x02ff}, // Lights 1-5-9 on all three levels
+                               {0x007,0x007,0x007,0x06ff}, // Lights 1-2-3 on all three levels
+                               {0x038,0x038,0x038,0x06ff}, // Lights 4-5-6 on all three levels
+                               {0x1c0,0x1c0,0x1c0,0x06ff}, // Lights 7-8-9 on all three levels
+                               {0x111,0x111,0x111,0x02ff}, // Lights 1-5-9 on all three levels
+                               {0x124,0x124,0x124,0x06ff}, // Lights 3-6-9 on all three levels                               
+                               {0x092,0x092,0x092,0x06ff}, // Lights 2-5-8 on all three levels
+                               {0x049,0x049,0x049,0x06ff}, // Lights 1-4-7 on all three levels                              
+                               {0x111,0x111,0x111,0x02ff}, // Lights 1-5-9 on all three levels
+                               {0x007,0x007,0x007,0x06ff}, // Lights 1-2-3 on all three levels
+                               {0x038,0x038,0x038,0x06ff}, // Lights 4-5-6 on all three levels
+                               {0x1c0,0x1c0,0x1c0,0x06ff}, // Lights 7-8-9 on all three levels
+                               {0x111,0x111,0x111,0x02ff}, // Lights 1-5-9 on all three levels
+                               {0x124,0x124,0x124,0x06ff}, // Lights 3-6-9 on all three levels                               
+                               {0x092,0x092,0x092,0x06ff}, // Lights 2-5-8 on all three levels
+                               {0x049,0x049,0x049,0x06ff}, // Lights 1-4-7 on all three levels                              
+                               {0x111,0x111,0x111,0x02ff}, // Lights 1-5-9 on all three levels
 
 //         Raindrops
 // 0x000 = none
@@ -203,23 +221,23 @@ const unsigned int table[][4]={
 // 0x385 = LEDs 1-3-8-9
 // 0x712 = LEDs 2-5-9
 
-//                               {0x000,0x000,0x001,0x02ff}, 
-//                               {0x000,0x001,0x010,0x02ff}, 
-//                               {0x001,0x010,0x100,0x02ff}, 
-//                               {0x010,0x100,0x010,0x02ff}, 
-//                               {0x100,0x010,0x020,0x02ff}, 
-//                               {0x010,0x020,0x001,0x02ff}, 
-//                               {0x020,0x001,0x010,0x02ff}, 
-//                               {0x001,0x010,0x004,0x02ff}, 
+                               {0x000,0x000,0x001,0x02ff}, 
+                               {0x000,0x001,0x010,0x02ff}, 
+                               {0x001,0x010,0x100,0x02ff}, 
+                               {0x010,0x100,0x010,0x02ff}, 
+                               {0x100,0x010,0x020,0x02ff}, 
+                               {0x010,0x020,0x001,0x02ff}, 
+                               {0x020,0x001,0x010,0x02ff}, 
+                               {0x001,0x010,0x004,0x02ff}, 
  
-//                               {0x010,0x004,0x001,0x02ff}, 
-//                               {0x004,0x001,0x010,0x02ff}, 
-//                               {0x001,0x010,0x000,0x02ff}, 
-//                               {0x010,0x000,0x100,0x02ff}, 
-//                               {0x000,0x100,0x050,0x02ff}, 
-//                               {0x100,0x050,0x001,0x02ff}, 
-//                               {0x050,0x001,0x000,0x02ff}, 
-//                               {0x001,0x000,0x000,0x02ff}, 
+                               {0x010,0x004,0x001,0x02ff}, 
+                               {0x004,0x001,0x010,0x02ff}, 
+                               {0x001,0x010,0x000,0x02ff}, 
+                               {0x010,0x000,0x100,0x02ff}, 
+                               {0x000,0x100,0x050,0x02ff}, 
+                               {0x100,0x050,0x001,0x02ff}, 
+                               {0x050,0x001,0x000,0x02ff}, 
+                               {0x001,0x000,0x000,0x02ff}, 
                                
                               };
 int scannow=0,scandir=0;
